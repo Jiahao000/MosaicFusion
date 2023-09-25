@@ -16,7 +16,7 @@
 
 <div>
     <h4 align="center">
-        • <a href="" target='_blank'>[arXiv]</a> •
+        • <a href="https://arxiv.org/abs/2309.13042" target='_blank'>[arXiv]</a> •
     </h4>
 </div>
 
@@ -67,7 +67,7 @@ If you find this work useful for your research, please consider citing our paper
 @article{xie2023mosaicfusion,
   author = {Xie, Jiahao and Li, Wei and Li, Xiangtai and Liu, Ziwei and Ong, Yew Soon and Loy, Chen Change},
   title = {MosaicFusion: Diffusion Models as Data Augmenters for Large Vocabulary Instance Segmentation},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2309.13042},
   year = {2023}
 }
 ```
