@@ -61,6 +61,48 @@ Given only interest category names, MosaicFusion can generate high-quality multi
 <img src="assets/visualization.png"  width="100%" height="100%">
 </div>
 
+## 🛠️ Usage
+
+### Installation
+
+- Clone our [repo](https://github.com/Jiahao000/MosaicFusion) from GitHub:
+```shell
+git clone https://github.com/Jiahao000/MosaicFusion.git
+cd MosaicFusion
+```
+- Create the `conda` environment:
+```shell
+conda env create -f environment.yml
+```
+- Download [lvis_v1_train.json](https://dl.fbaipublicfiles.com/LVIS/lvis_v1_train.json.zip), unzip and put it under a directory, e.g., `data/lvis/meta/lvis_v1_train.json`.
+
+### Data Generation
+
+1. Generate images and masks with MosaicFusion:
+```shell
+bash scripts/dist_text2seg.sh "a photo of a single category" output/text2seg Generation_log
+```
+Alternatively, if you run `MosaicFusion` on a cluster managed with [slurm](https://slurm.schedmd.com/):
+```shell
+bash scripts/slurm_text2seg.sh Dummy Generation_job "a photo of a single category" output/text2seg Generation_log
+```
+2. Convert generated images and masks to the required data format:
+```shell
+bash scripts/run_seg2ann.sh output/text2seg output/seg2ann
+```
+3. Merge MosaicFusion annotations into LVIS annotations:
+```shell
+bash scripts/run_merge_ann.sh data/lvis/meta/lvis_v1_train.json output/seg2ann/annotations/lvis_v1_train_mosaicfusion.json output/seg2ann/annotations/lvis_v1_train_merged.json
+```
+
+### Training Downstream Detectors or Segmentors
+
+Please refer to [TRAIN.md](TRAIN.md) for training details.
+
+## 👨‍💻 Todo
+- [x] Data generation code for MosaicFusion
+- [ ] Third-party training code with MosaicFusion data
+
 ## 🤟 Citation
 If you find this work useful for your research, please consider citing our paper:
 ```bibtex

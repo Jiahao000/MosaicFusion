@@ -1,0 +1,1 @@
+After generating synthetic data with the required format, we can use them to train various downstream detection and segmentation models to improve their performances. Feel free to use MosaicFusion data to train your own models. More third-party codes and instructions are under construction. Please stay tuned! 🤗
