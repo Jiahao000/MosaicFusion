@@ -15,6 +15,10 @@
 </div>
 
 <div>
+    :triangular_flag_on_post: <strong>Accepted to IJCV 2024</strong>
+</div>
+
+<div>
     <h4 align="center">
         • <a href="https://arxiv.org/abs/2309.13042" target='_blank'>[arXiv]</a> •
     </h4>
@@ -106,11 +110,11 @@ Please refer to [TRAIN.md](TRAIN.md) for training details.
 ## 🤟 Citation
 If you find this work useful for your research, please consider citing our paper:
 ```bibtex
-@article{xie2023mosaicfusion,
+@article{xie2024mosaicfusion,
   author = {Xie, Jiahao and Li, Wei and Li, Xiangtai and Liu, Ziwei and Ong, Yew Soon and Loy, Chen Change},
   title = {MosaicFusion: Diffusion Models as Data Augmenters for Large Vocabulary Instance Segmentation},
-  journal = {arXiv preprint arXiv:2309.13042},
-  year = {2023}
+  journal = {International Journal of Computer Vision},
+  year = {2024}
 }
 ```
 
